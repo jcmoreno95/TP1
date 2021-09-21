@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "LibreriaTP.h"
+
+// funcion para verificar si el valor ingresado esta dendro del rango dado
 float GetFloat(float* punteroResultado, char mensaje[],char mensajeError [], float minimo,float maximo,int reintentos)
 {		float buffer;
 		int retorno=1;
@@ -27,8 +29,10 @@ float GetFloat(float* punteroResultado, char mensaje[],char mensajeError [], flo
 
 
 	}
-return retorno;}
+return retorno;
+}
 
+// Funcion que devuelve suma de dos valores
 float SumaFloat(float num1,float num2){
 
 	float resultado;
@@ -39,7 +43,7 @@ float SumaFloat(float num1,float num2){
 }
 
 
-
+// Funcion que devuelve resta de dos valores 
 float RestaFloat(float num1,float num2){
 
 	float resultado;
@@ -64,6 +68,7 @@ return 0;
 
 }
 
+// Funcion que devuelve multiplicacion de dos valores 
 
 float MultiplicacionFloat(float num1,float num2){
 
@@ -74,19 +79,22 @@ float MultiplicacionFloat(float num1,float num2){
 	return resultado;
 }
 
+// Funcion que devuelveel factorial de un valors 
+
 float FactorialFloat(float num1, float *resultado){
 
 	int c;
     float fact;
 
     fact= num1;
-
+	// Si el factorial es negativo da error
 	if( num1<0)
 	{
 		return 1;
 	}
 	else
 	{
+			// El factorial de 0 es 1
 			if(num1==0)
 			{
 				*resultado=1;
