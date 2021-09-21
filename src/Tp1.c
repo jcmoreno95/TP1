@@ -18,10 +18,12 @@ int main()
     float n1, n2;
     float suma,resta,multiplicacion,division,raiz1,raiz2;
 
+    // Pido los dos valores para hacer las operaciones
     GetFloat(&n1,"Ingrese el 1er operando: ","Valor incorrecto",-100,100,5);
     GetFloat(&n2,"Ingrese el 2do operando: ","Valor incorrecto",-100,100,5);
     do
     {
+	// Creo el menu para la calculadora
         printf( "\n   >>> MENU CALCULADORA <<<");
         printf( "\n\n   1. Sumar dos numeros.");
         printf( "\n   2. Restar dos numeros.");
@@ -33,6 +35,7 @@ int main()
         /* Filtramos la opción elegida por el usuario */
         do
         {
+	    //Verifico si el valor esta en el rango dado o si es un valor valido
             printf( "\n   Introduzca opcion (1-6): " );
             fflush( stdin );
             scanf( " %c", &opcion);
