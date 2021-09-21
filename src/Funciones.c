@@ -64,8 +64,6 @@ float DivisionFloat(float num1,float num2, float* resultado){
 	}
 
 return 0;
-
-
 }
 
 // Funcion que devuelve multiplicacion de dos valores 
@@ -94,20 +92,20 @@ float FactorialFloat(float num1, float *resultado){
 	}
 	else
 	{
-			// El factorial de 0 es 1
-			if(num1==0)
+		// El factorial de 0 es 1
+		if(num1==0)
+		{
+			*resultado=1;
+		}
+		else
+		{
+			for (c = 1; c < num1; c++)
 			{
-				*resultado=1;
+			       fact = fact * c;
 			}
-			else
-			{
-				for (c = 1; c < num1; c++)
-				{
-		        fact = fact * c;
-				}
-			*resultado= fact;
+		*resultado= fact;
 
-			}
+		}
 	}
 
 return 0;
