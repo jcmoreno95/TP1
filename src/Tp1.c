@@ -41,42 +41,37 @@ int main()
             scanf( " %c", &opcion);
 
         } while ( opcion < '1' || opcion > '6' );
-        /* La opción sólo puede ser '1', '2', '3', '4' o '5' */
 
         switch ( opcion )
         {
-                      /* Opción 1: Sumar */
             case '1':
                       suma = SumaFloat(n1,n2);
-					  printf("\nEl resultado de %.2f + %.2f es: %.2f\n", n1,n2,suma);
+		       printf("\nEl resultado de %.2f + %.2f es: %.2f\n", n1,n2,suma);
                       break;
 
-                      /* Opción 2: Restar */
             case '2':
             		resta = RestaFloat(n1,n2);
             		printf("\nEl resultado de %.2f - %.2f es: %.2f\n", n1,n2,resta);
                       break;
 
-                      /* Opción 3: Multiplicar */
             case '3':
             		multiplicacion = MultiplicacionFloat(n1,n2);
             		printf("\nEl resultado de %.2f * %.2f es: %.2f\n", n1,n2,multiplicacion);
                       break;
 
-                      /* Opción 4: División entera */
             case '4':
                       if (DivisionFloat(n1,n2,&division) == 0 )
                     	  printf("\nEl resultado de %.2f / %.2f es: %.2f\n", n1,n2,division);
                       else
                           printf( "\n   ERROR: No se puede dividir entre cero.\n" );
                       break;
+                      
             case '5':
                      if (FactorialFloat(n1, &raiz1) == 0 && FactorialFloat(n2, &raiz2) == 0)
                     	 printf("\nEl factorial de %.2f es: %.2f  El factorial de %.2f es: %.2f\n", n1,raiz1,n2,raiz2);
                       else
                          printf( "\n   ERROR: No se puede calcular factorial negativo\n" );
-
-
+                      break;
         }
 
     } while ( opcion != '6' );
